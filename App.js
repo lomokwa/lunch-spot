@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   header: {
+    backgroundColor: "1e2124",
     color: "whitesmoke",
     fontSize: 36,
   },

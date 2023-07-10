@@ -39,8 +39,6 @@ export default function RestList({ selectRestaurant }) {
 
 const styles = StyleSheet.create({
   scrollingList: {
-    borderColor: "red",
-    borderWidth: 2,
     width: "100%",
     marginTop: 20,
   },
