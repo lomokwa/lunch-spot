@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import RestList from './app/RestList';
 import Tray from './app/Tray';
 
@@ -10,8 +9,9 @@ export default function App() {
 
   return (
     <>
+    <StatusBar style="dark" />
       <View style={styles.container}>
-        <Text style={styles.header}>Lunch Spot</Text>
+        <Text style={styles.header}>Lunch SPOT</Text>
         <RestList style={styles.header} selectRestaurant={selectRestaurant}/>
         <StatusBar style="auto" />
       </View>
@@ -22,15 +22,19 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 70,
     flex: 1,
-    backgroundColor: '#282b30',
-    alignItems: 'center',
+    backgroundColor: '#0d0d0d',
+    alignItems: 'left',
     justifyContent: 'flex-start',
   },
   header: {
-    backgroundColor: "1e2124",
+    backgroundColor: "#090909",
     color: "whitesmoke",
-    fontSize: 36,
+    fontSize: 30,
+    width: "100%",
+    paddingTop: 60,
+    paddingBottom: 10,
+    paddingLeft: 20,
+    fontWeight: "bold"
   },
 });

@@ -15,10 +15,10 @@ export default function Tray({ setSelectRestaurant }) {
     <View style={styles.tray}>
       <View style={styles.buttonList}>
         <TouchableOpacity onPress={choose} style={styles.button}>
-          <Text style={styles.buttonText}>Feeling Lucky</Text>
+          <Text style={styles.buttonText}>Feeling Lucky 🍀</Text>
         </TouchableOpacity>
         <TouchableOpacity  onPress={clear} style={styles.resetButton}>
-          <Text style={styles.buttonText}>Reset</Text>
+          <Text style={styles.resetButtonText}>Reset</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -27,36 +27,44 @@ export default function Tray({ setSelectRestaurant }) {
 
 const styles = StyleSheet.create({
   tray: {
-    backgroundColor: "#1e2124",
+    backgroundColor: "#090909",
     width: "100%",
-    height: 90,
+    height: 100,
     justifyContent: "center",
     alignItems: "center",
-    paddingBottom: 20 
+    paddingTop: 30,
+    paddingBottom: 30, 
+    shadowColor: "#626262",
+    shadowOffset: {
+	  width: 0,
+	  height: 8,
+    },
+    shadowOpacity: 0.46,
+    shadowRadius: 11.14,
+    elevation: 17,
   },
   button: {
-    backgroundColor: "#9146FF",
+    backgroundColor: "#128eb2",
     paddingHorizontal: 24,
-    paddingVertical: 8,
-    borderRadius: 4,
-    borderStyle: "solid",
-    borderColor: "black",
-    borderWidth: 2
+    paddingVertical: 13,
+    borderRadius: 17,
   },
   buttonText: {
     fontWeight: 800,
     fontSize: 13, 
-    color: "whitesmoke"
+    color: "#0e1011",
   },
   resetButton: {
-    backgroundColor: "salmon",
+    backgroundColor: "#3b3b3b",
     paddingHorizontal: 24,
-    paddingVertical: 8,
-    borderRadius: 4,
-    borderStyle: "solid",
-    borderColor: "black",
-    borderWidth: 2,
+    paddingVertical: 13,
+    borderRadius: 17,
   },
+  resetButtonText: {
+    fontWeight: 800,
+    fontSize: 13, 
+    color: "#0e1011",
+  },  
   buttonList: {
     flexDirection: "row",
     width: "80%",

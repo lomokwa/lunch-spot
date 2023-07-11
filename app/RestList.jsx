@@ -14,7 +14,6 @@ export default function RestList({ selectRestaurant }) {
   }, [])
 
   useEffect(() => {
-    console.log(selectRestaurant)
     if (selectRestaurant > 0) {
       const index = Math.floor(selectRestaurant * restaurantList.length)
       setChosenRestaurant(restaurantList[index])
@@ -40,7 +39,7 @@ export default function RestList({ selectRestaurant }) {
 const styles = StyleSheet.create({
   scrollingList: {
     width: "100%",
-    marginTop: 20,
+    marginTop: 0,
   },
   loadingText: {
     padding: 8,
